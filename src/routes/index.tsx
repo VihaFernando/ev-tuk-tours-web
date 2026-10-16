@@ -420,11 +420,17 @@ function Hero() {
           viewBox="0 0 120 14"
           className="ml-auto mt-1 h-3 w-28"
           fill="none"
-          stroke="currentColor"
           strokeWidth="1.6"
           strokeLinecap="round"
         >
-          <path d="M2 11C30 3 70 1 118 5" />
+          <defs>
+            <linearGradient id="hero-underline-fade" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%" stopColor="currentColor" stopOpacity="0" />
+              <stop offset="35%" stopColor="currentColor" stopOpacity="1" />
+              <stop offset="100%" stopColor="currentColor" stopOpacity="0" />
+            </linearGradient>
+          </defs>
+          <path d="M2 11C30 3 70 1 118 5" stroke="url(#hero-underline-fade)" />
         </svg>
       </div>
 
